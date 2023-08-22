@@ -1,3 +1,3 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 from string import ascii_uppercase as a; print(*(a), sep='', end='\n')
 
