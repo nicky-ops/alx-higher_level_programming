@@ -1,2 +1,3 @@
-#!/usr/bin/python3
-print(*list(map(chr, range(65, 91))), sep='', end='\n')
+#!/usr/bin/env python3
+from string import ascii_uppercase as a; print(*(a), sep='', end='\n')
+
