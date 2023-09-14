@@ -7,7 +7,6 @@ Matrix division
 def matrix_divided(matrix, div):
     """
     function that takes a matrix and an integer(div) as its arguments and divides each element of the matrix by integer(div)
-    returns a new matrix
     """
     new_matrix = []
     lst = []
@@ -28,11 +27,3 @@ def matrix_divided(matrix, div):
             lst.append(result)
         new_matrix.append(lst)
     return new_matrix
-
-
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6]
-]
-print(matrix_divided(matrix, 3))
-print(matrix)
