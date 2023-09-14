@@ -24,6 +24,6 @@ def matrix_divided(matrix, div):
     for i in matrix:
         for j in i:
             result =float("{:.2f}".format(j/div))
-        lst.append(result)
-    new_matrix.append(lst)
+            lst.append(result)
+        new_matrix.append(lst)
     return new_matrix
