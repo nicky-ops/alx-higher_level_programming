@@ -21,9 +21,12 @@ def matrix_divided(matrix, div):
     for i in range(0, (len(matrix) - 1)):
         if len(matrix[i]) != len(matrix[i + 1]):
             raise TypeError("Each row of the matrix must have the same size")
-    for i in matrix:
-        for j in i:
-            result =float("{:.2f}".format(j/div))
-            lst.append(result)
-        new_matrix.append(lst)
+    new_matrix = [[round(idx / div, 2) for idx in mtx] for mtx in matrix]
     return new_matrix
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6]
+]
+print(matrix_divided(matrix, 3))
+print(matrix)
