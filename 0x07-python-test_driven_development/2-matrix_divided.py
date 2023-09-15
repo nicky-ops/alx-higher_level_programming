@@ -23,10 +23,3 @@ def matrix_divided(matrix, div):
             raise TypeError("Each row of the matrix must have the same size")
     new_matrix = [[round(idx / div, 2) for idx in mtx] for mtx in matrix]
     return new_matrix
-
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6]
-]
-print(matrix_divided(matrix, 3))
-print(matrix)
