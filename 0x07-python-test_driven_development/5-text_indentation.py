@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Function that prints a text with 2 new lines after ., ? and : 
+Function that prints a text with 2 new lines after ., ? and :
     characters
 """
 
