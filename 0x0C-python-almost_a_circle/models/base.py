@@ -3,6 +3,7 @@
 Base class for all other classes in the project
 """
 import json
+import os
 
 
 class Base:
@@ -52,4 +53,17 @@ class Base:
         if json_string is not None:
             return json.loads(json_string)
         else:
+            return []
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        returns a list of instances
+        """
+        filename = cls.__name__ + ".json"
+        try:
+            with open(filename) as jsonfile:
+                list_dicts = Base.from_json_string(jsonfile.read())
+                return [cls.create(**d) for d in list_dicts]
+        except IOError:
             return []
