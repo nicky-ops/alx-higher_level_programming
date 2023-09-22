@@ -43,3 +43,13 @@ class Base:
                 jsonfile.write(Base.to_json_string(list_dicts))
             else:
                 jsonfile.write("[]")
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        returns the deserialization of a JSON string
+        """
+        if json_string is not None:
+            return json.loads(json_string)
+        else:
+            return []
