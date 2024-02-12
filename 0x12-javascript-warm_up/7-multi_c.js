@@ -1,2 +1,7 @@
 #!/usr/bin/node
-console.log(parseInt(process.argv[2]) ? 'C is fun\n'.repeat(parseInt(process.argv[2]) - 1) + 'C is fun' : 'Missing number of occurences');
+if (!parseInt(process.argv[2]) || parseInt(process.argv[2]) <= 0) {
+  console.log('Missing number of occurrences');
+} else {
+  const message = 'C is fun\n';
+  console.log(message.repeat(parseInt(process.argv[2])));
+}
