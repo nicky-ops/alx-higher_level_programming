@@ -2,11 +2,11 @@
 /**
  * Square class that inherits from previous square class
  */
-const PrevSquare = require(./5-square);
+const PrevSquare = require('./5-square');
 
 class Square extends PrevSquare {
   charPrint (c) {
-    const myChar = c === undefined ? X : c;
+    const myChar = c === undefined ? 'X' : c;
     for (let i = 0; i < this.height; i++) {
       let myVar = ;
       let y = 0;
