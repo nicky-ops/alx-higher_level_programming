@@ -19,11 +19,18 @@ RETURNS:
 """
 
 if __name__ == '__main__':
-    db = MySQLdb.connect(host="localhost", port=3306,  user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    """
+    Access to the database and get the states
+    from the database.
+    """
+    db_connect = MySQLdb.connect(
+        host="localhost", user=argv[1], port=3306, passwd=argv[2], db=argv[3])
 
-    cur = db.cursor()
+    db_cursor = db_connect.cursor()
 
-    cur.execute("SELECT * FROM states")
-    results = cur.fetchall()
-    for result in results:
-        print(result)
+    db_cursor.execute("SELECT * FROM states")
+
+    rows_selected = db_cursor.fetchall()
+
+    for row in rows_selected:
+        print(row)
