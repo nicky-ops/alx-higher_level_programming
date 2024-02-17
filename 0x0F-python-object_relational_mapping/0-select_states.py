@@ -27,7 +27,3 @@ if __name__ == '__main__':
     results = cur.fetchall()
     for result in results:
         print(result)
-
-
-    cur.close()
-    connection.close()
