@@ -1,22 +1,11 @@
 #!/usr/bin/python3
+"""
+This script lists all states from the
+database `hbtn_0e_0_usa`.
+"""
+
 import MySQLdb
-import sys
-"""
-This script lists all states from the database hbtn_0e_0_usa
-
-ARGUMENTS:
-    mysql username - username for the database
-    mysql password - password for the database
-    database name  - name of the database
-
-
-uses the module MySQLdb:
-    import MySQLdb
-connects to a MySQL server running on localhost at port 3306
-
-RETURNS:
-    results sorted in ascending order by states.id
-"""
+from sys import argv
 
 if __name__ == '__main__':
     """
