@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 This script lists all states from the
-database `hbtn_0e_0_usa`.
+database `hbtn_0e_0_usa` with a `name` starting with N.
 """
 
 import MySQLdb
@@ -17,7 +17,8 @@ if __name__ == '__main__':
 
     db_cursor = db_connect.cursor()
 
-    db_cursor.execute("SELECT * FROM states WHERE name %STARTSWITH 'N' ORDER BY states.id ASC")
+    db_cursor.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' \
+            ORDER BY states.id ASC")
 
     rows_selected = db_cursor.fetchall()
 
