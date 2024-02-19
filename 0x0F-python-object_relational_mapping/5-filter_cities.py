@@ -20,9 +20,9 @@ if __name__ == '__main__':
     db_cursor.execute("SELECT cities.id, cities.name, %(state_name)s FROM \
             cities INNER JOIN states ON \
             cities.state_id = states.id \
-            ORDER BY cities.id ASC", {'state_name':argv[4]})
+            ORDER BY cities.id ASC", {'state_name': argv[4]})
 
     rows_selected = db_cursor.fetchall()
 
-    for row in rows_selected:
-        print(row)
+    if rows_selected is not None:
+        print(", ".join([row[1] for row in rows_selected]))
