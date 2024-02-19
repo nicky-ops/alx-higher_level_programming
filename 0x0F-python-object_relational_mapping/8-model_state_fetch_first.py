@@ -15,7 +15,7 @@ if __name__ == "__main__":
     engine = create_engine(url.format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
     session = Session()
-    for instance in session.query(State).order_by(State.id).limit(1):
-        print("{0}: {1}".format(instance.id, instance.name))
+    instance = session.query(State).order_by(State.id).first()
+    print("{0}: {1}".format(instance.id, instance.name))
 
     session.close()
