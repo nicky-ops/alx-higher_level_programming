@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''
-Lists all State objects from the database hbtn_0e_usa
+This script prints the first state object from the database hbtn_0e_usa
 '''
 from model_state import Base, State
 import sys
@@ -9,9 +9,9 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     """
-    Lists all the states
+    List a state from the database
     """
-    url = 'mysql+mysqldb://{}:{}@localhost/{}'
+    url = 'mysql+mysqldb://{}:{}@localhost:3306/{}'
     engine = create_engine(url.format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
     session = Session()
