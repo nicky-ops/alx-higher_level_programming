@@ -15,10 +15,11 @@ if __name__ == "__main__":
     engine = create_engine(url.format(sys.argv[1], sys.argv[2], sys.argv[3]))
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.query(State).filter(State.name == sys.argv[4]).first()
-    if state is not None:
-        print('{0}'.format(state.id))
-    else:
-        print("Not Found")
+    if len(sys.argv) == 5:
+        state = session.query(State).filter(State.name == sys.argv[4]).first()
+        if state is not None:
+            print('{0}'.format(state.id))
+        else:
+            print("Not Found")
 
     session.close()
