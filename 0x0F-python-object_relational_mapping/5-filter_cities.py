@@ -17,9 +17,10 @@ if __name__ == '__main__':
 
     db_cursor = db_connect.cursor()
 
-    db_cursor.execute("SELECT cities.id, cities.name, state.name=%s FROM \
+    db_cursor.execute("SELECT cities.id, cities.name, %(state_name)s FROM \
             cities INNER JOIN states ON \
-            cities.state_id = states.id ORDER BY cities.id ASC", argv[4])
+            cities.state_id = states.id \
+            ORDER BY cities.id ASC", {'state_name':argv[4]})
 
     rows_selected = db_cursor.fetchall()
 
