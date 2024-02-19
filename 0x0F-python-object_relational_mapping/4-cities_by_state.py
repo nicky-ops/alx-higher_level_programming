@@ -17,7 +17,7 @@ if __name__ == '__main__':
 
     db_cursor = db_connect.cursor()
 
-    db_cursor.execute("SELECT * FROM cities ORDER BY id ASC")
+    db_cursor.execute("SELECT * FROM cities ORDER BY cities.id ASC")
 
     rows_selected = db_cursor.fetchall()
 
