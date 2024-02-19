@@ -2,6 +2,7 @@
 """
 This script lists all cities from the
 database `hbtn_0e_0_usa`.
+It takes state as an argument and lists all cities of that state
 """
 
 import MySQLdb
@@ -17,9 +18,9 @@ if __name__ == '__main__':
 
     db_cursor = db_connect.cursor()
 
-    db_cursor.execute("SELECT cities.id, cities.name, %(state_name)s FROM \
-            cities INNER JOIN states ON \
-            cities.state_id = states.id \
+    db_cursor.execute("SELECT cities.id, cities.name, FROM \
+            cities INNER JOIN states ON cities.state_id = states.id \
+            WHERE states.name = %(state_name)s \
             ORDER BY cities.id ASC", {'state_name': argv[4]})
 
     rows_selected = db_cursor.fetchall()
