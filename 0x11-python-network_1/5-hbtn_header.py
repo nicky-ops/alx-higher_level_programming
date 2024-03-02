@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-import requests
-from sys import argv
 """
 this script fetches a URL passed in as an agument using requests package
 displays the value of the X-Request-Id variable
 """
+import requests
+from sys import argv
 
 
 if __name__ == "__main__":
