@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-import requests
-from sys import argv
 """
 script takes in a letter
 sends a POST request to http://0.0.0.0:5000/search_user
 """
+import requests
+from sys import argv
 
 
 if __name__ == "__main__":
