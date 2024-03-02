@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-import urllib.request
-from urllib.error import HTTPError
-from sys import argv
 """
 this script takes a URL argument
 displays the body of the response using urllib package
 """
+import urllib.request
+from urllib.error import HTTPError
+from sys import argv
 
 
 if __name__ == "__main__":

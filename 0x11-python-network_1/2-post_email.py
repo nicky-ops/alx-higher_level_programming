@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-import urllib.parse
-import urllib.request
-from sys import argv
 """
 this script fetches https://alx-intranet.hbtn.io/status using urllib module
 """
+import urllib.parse
+import urllib.request
+from sys import argv
 
 
 if __name__ == "__main__":

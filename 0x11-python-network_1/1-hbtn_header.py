@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-import urllib.request
-from sys import argv
 """
 this script fetches a URL passed in as an agument using urllib package
 displays the value of the X-Request-Id variable
 """
+import urllib.request
+from sys import argv
 
 
 if __name__ == "__main__":
