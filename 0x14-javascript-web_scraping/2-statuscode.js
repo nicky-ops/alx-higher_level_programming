@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const request = require('request');
 const requestHTTP = process.argv[2];
-request(requestHTTP, function (error, response, body) {
+request.get(requestHTTP, function (error, response) {
   console.error('error:', error);
-  console.log('code: ', response && response.statusCode);
+  console.log('code: ', response.statusCode);
 });
