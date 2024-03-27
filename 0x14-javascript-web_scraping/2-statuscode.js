@@ -2,6 +2,9 @@
 const request = require('request');
 const requestHTTP = process.argv[2];
 request.get(requestHTTP, function (error, response) {
-  console.error('error:', error);
-  console.log('code: ', response.statusCode);
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(`code: ${response.statusCode}`);
+  }
 });
